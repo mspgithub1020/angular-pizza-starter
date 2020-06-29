@@ -1,0 +1,3 @@
+// usando el cliente de angular de http
+// un servicio que implemente el
+// get(id, opts), getAll(opts), ...
