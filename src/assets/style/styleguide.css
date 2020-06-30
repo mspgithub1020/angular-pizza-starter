@@ -1,0 +1,40 @@
+:root {
+    --ps-margin-tiny: 0.25rem;
+    --ps-margin-small: 0.5rem;
+    --ps-margin-medium: 0.75rem;
+    --ps-margin-big: 1rem;
+    --ps-margin-huge: 1.25rem;
+}
+
+:root {
+    --ps-padding-tiny: 0.25rem;
+    --ps-padding-small: 0.5rem;
+    --ps-padding-medium: 0.75rem;
+    --ps-padding-big: 1rem;
+    --ps-padding-huge: 1.25rem;
+}
+
+:root {
+    --ps-font-size: 1rem;
+    --ps-font-tiny: 0.618rem;
+    --ps-font-small: 2rem;
+    --ps-font-medium: 3rem;
+    --ps-font-big: 4rem;
+    --ps-font-huge: 8rem;
+}
+
+:root {
+  --ps-color-background: #fff;
+  --ps-color-primary: #6200ee;
+  --ps-color-primary--light: #9e47ff;
+  --ps-color-primary--dark: #0400ba;
+  --ps-color-secondary: #018786;
+  --ps-color-secondary--light: #4fb7b6;
+  --ps-color-secondary--dark: #005959;
+  --ps-color-on-primary: #fff;
+  --ps-color-on-secondary: #fff;
+  --ps-color-error: #b00020;
+  --ps-color-info: #1565c0;
+  --ps-color-success: #8bc34a;
+  --ps-color-warning: #ffa726;
+}

@@ -13,7 +13,7 @@ module.exports = {
         upload: path.resolve(__dirname,'upload')
     },
     imagesDir: 'images',
-    
+
     authentication: {
         authSecret: process.env.AUTH_SECRET || 'auth_secret',
         refreshSecret: process.env.REFRESH_SECRET || 'refresh_secret',
@@ -21,9 +21,9 @@ module.exports = {
         refreshTTL: THIRTY_DAYS,
         refreshCookie: 'refresh',
     },
-    
+
     allowedOrigins: [
-        'http://localhost:3000',
+        'http://localhost:4200',
         'https://www.google.es'
     ]
 }

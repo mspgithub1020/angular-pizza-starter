@@ -1,0 +1,28 @@
+<h2>Register</h2>
+<form class="register vertical" (ngSubmit)="onSubmit()" #form="ngForm">
+  <div role="alert" *ngIf="registerError">
+    {{registerError}}
+  </div>
+  <mat-form-field class="register__field" appearance="fill">
+    <mat-label>Enter your user name</mat-label>
+    <input matInput name="name" [(ngModel)]="model.name" #name="ngModel" required>
+    <mat-error *ngIf="name.invalid">
+      {{errorsService.get(name, errors.name)}}
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="register__field"  appearance="fill">
+    <mat-label>Enter your email</mat-label>
+    <input matInput name="email" [(ngModel)]="model.email" #email="ngModel" required email>
+    <mat-error *ngIf="email.invalid">
+      {{errorsService.get(email, errors.email)}}
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="register__field"  appearance="fill">
+    <mat-label>Enter a password</mat-label>
+    <input matInput name="password" type="password" [(ngModel)]="model.password" #password="ngModel" required minlength="3">
+    <mat-error *ngIf="password.invalid">
+      {{errorsService.get(password, errors.password)}}
+    </mat-error>
+  </mat-form-field>
+  <button mat-raised-button type="submit" color="primary">Register now</button>
+</form>
