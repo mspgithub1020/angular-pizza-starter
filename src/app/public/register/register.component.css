@@ -16,3 +16,16 @@
 .register__field {
   margin-bottom: 1rem;
 }
+
+.register__alert {
+  padding: var(--ps-padding-medium);
+  background-color: var(--ps-color-error);
+  color: var(--ps-color-on-primary);
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--ps-margin-medium);
+}
+
+.register__alert__icon {
+  font-size: var(--ps-font-small);
+}

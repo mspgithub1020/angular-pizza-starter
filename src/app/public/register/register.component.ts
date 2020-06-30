@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ViewChildren, QueryList } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ErrorsService } from '../../core/validation/errors.service';
 import { RegisterService } from './register.service';

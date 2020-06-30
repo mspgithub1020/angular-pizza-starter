@@ -1,6 +1,7 @@
 <h2>Register</h2>
 <form class="register vertical" (ngSubmit)="onSubmit()" #form="ngForm">
-  <div role="alert" *ngIf="registerError">
+  <div role="alert" class="register__alert horizontal" *ngIf="registerError">
+    <mat-icon>error</mat-icon>
     {{registerError}}
   </div>
   <mat-form-field class="register__field" appearance="fill">
