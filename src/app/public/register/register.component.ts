@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { ErrorsService } from '../../core/validation/errors.service';
 import { RegisterService } from './register.service';
 import { Router } from '@angular/router';
+import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'ps-register',
@@ -30,11 +31,11 @@ export class RegisterComponent {
     },
     password: {
       required: 'you must enter a password',
-      minlength: 'Your password must be at lest 3 characters long'
+      minlength: 'Your password must be at least 3 characters long'
     }
   };
 
-  registerError = false;
+  registerError = '';
 
   constructor(
     public errorsService: ErrorsService,
@@ -53,7 +54,7 @@ export class RegisterComponent {
   private onRegisterSuccess = () => {
     this.router.navigate(['/public/login'], {replaceUrl: true});
   }
-  private onRegisterError = (res) => {
+  private onRegisterError = (res: HttpErrorResponse) => {
     this.registerError = res.error.error;
   }
 }
