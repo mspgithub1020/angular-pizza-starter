@@ -8,7 +8,11 @@ const routes: Routes = [
     path: '',
     component: PrivateComponent,
     children: [
-    ]
+      {
+        path: 'header',
+        loadChildren: () => import('./header/header.module').then(m => m.HeaderModule),
+   }
+  ]
   }
 ];
 
