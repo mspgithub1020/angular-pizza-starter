@@ -13,7 +13,6 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class LoginComponent {
 @ViewChild('form') form: FormGroup;
 @ViewChild('email') email: FormControl;
-@ViewChild('name') name: FormControl;
 
 model={
   email: '',
