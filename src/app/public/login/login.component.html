@@ -1,0 +1,22 @@
+<h2>Login</h2>
+<form class="login vertical"(ngSubmit)="onSubmit()" #form="ngForm">
+    <div role="alert" class="login__alert horizontal" *ngIf="loginError">
+        <mat-icon>Error</mat-icon>
+        {{loginError}}
+      </div>
+      <mat-form-field class="login__field"  appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput name="email" [(ngModel)]="model.email" #email="ngModel" required email>
+        <mat-error *ngIf="email.invalid">
+          {{errorsService.get(email, errors.email)}}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="login__field"  appearance="fill">
+        <mat-label>Enter a password</mat-label>
+        <input matInput name="password" type="password" [(ngModel)]="model.password" #password="ngModel">
+        <mat-error *ngIf="password.invalid">
+          {{errorsService.get(password, errors.password)}}
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button type="submit" color="primary">Login</button>
+    </form>

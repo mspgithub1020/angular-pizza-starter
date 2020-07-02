@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PublicComponent } from './public.component';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -11,7 +10,11 @@ const routes: Routes = [
       {
         path: 'register',
         loadChildren: () => import('./register/register.module').then(m => m.RegisterModule),
-      }
+      },
+      {
+        path: 'login',
+        loadChildren: () => import('./login/login.module').then(m => m.LoginModule),
+      },
     ]
   }
 ];

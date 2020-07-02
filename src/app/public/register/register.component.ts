@@ -39,7 +39,7 @@ export class RegisterComponent {
 
   constructor(
     public errorsService: ErrorsService,
-    private registerServie: RegisterService,
+    private registerService: RegisterService,
     private router: Router
   ) { }
 
@@ -47,7 +47,7 @@ export class RegisterComponent {
     if (this.form.invalid) {
       return;
     }
-    this.registerServie.register(this.model)
+    this.registerService.register(this.model)
       .then(this.onRegisterSuccess)
       .catch(this.onRegisterError);
   }
