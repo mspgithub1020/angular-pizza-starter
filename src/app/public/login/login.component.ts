@@ -4,6 +4,8 @@ import { ErrorsService } from '../../core/validation/errors.service';
 import { LoginService } from './login.service';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
+import { AuthService } from 'src/app/core/auth/auth.service';
+
 
 @Component({
   selector: 'ps-login',
@@ -34,7 +36,8 @@ loginError = '';
 constructor(
   public errorsService: ErrorsService,
   private loginService: LoginService,
-  private router: Router
+  private router: Router,
+  private authService: AuthService
 ) { }
 
 onSubmit() {
@@ -45,10 +48,14 @@ onSubmit() {
     .then(this.onLoginSuccess)
     .catch(this.onLoginError);
 }
-private onLoginSuccess = () => {
-  this.router.navigate(['/private/menu'], {replaceUrl: true});
+private onLoginSuccess = (data: {token: string}) => {
+  this.authService.token = data.token;
+  this.router.navigateByUrl('/', {replaceUrl: true});
 }
 private onLoginError = (res: HttpErrorResponse) => {
-  this.loginError = res.error.error;
+  const error = res.status === 401
+  ? 'Incorrect credentials'
+  : 'Unexpected error';
+  this.loginError = error;
 }
 }

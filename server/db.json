@@ -34,6 +34,12 @@
       "email": "test1@test.com",
       "name": "foo",
       "password": "$2b$10$LpY/7vlt62sNP6KaGQfwRujEv86Z/O/VPb55td0q2ezJJKY3ShAiy"
+    },
+    {
+      "id": "08106f05-c916-477b-9b80-ee16365cdde5",
+      "email": "belen.aguirre.de.carcer.rojo@gmail.com",
+      "name": "blenchu",
+      "password": "$2b$10$h2O4tbvNB4ldpp/qmnsove6WltpNSP3t6crQnIw6ZgO/jEhN8FGoG"
     }
   ],
   "pizzas": [
