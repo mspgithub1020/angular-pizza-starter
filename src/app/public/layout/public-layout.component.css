@@ -1,0 +1,11 @@
+.toolbar{
+    justify-content: space-between;
+}
+.toolbar__link{
+    text-decoration: none;
+    margin-right: var(--ps-margin-small);
+    color: var(--ps-color-on-primary)
+}
+.toolbar__link--active{
+    color: var(--ps-color-warning);
+}
