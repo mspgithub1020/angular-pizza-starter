@@ -52,6 +52,12 @@
       "email": "test@test2.com",
       "name": "test",
       "password": "$2b$10$v0ysTl/9Mx5w3WT5YLsDjOoSl1zRVRP38lx1I8FFR7tbOuyfs5sxq"
+    },
+    {
+      "id": "acfad216-e42e-472b-92bf-7b1fcf6a0fea",
+      "email": "a.peinado.sevilla@gmail.com",
+      "name": "antonio peinado sevilla",
+      "password": "$2b$10$zwBFZxr0qf0zJK1lYBMuZuHYfz1z7PQL88t69lP5AooG46.0tS8pS"
     }
   ],
   "pizzas": [
