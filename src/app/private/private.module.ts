@@ -7,6 +7,7 @@ import { AuthInterceptorProvider } from './services/http/auth.interceptor';
 import { HeaderModule } from './header/header.module';
 
 
+
 @NgModule({
   declarations: [PrivateComponent],
   imports: [PrivateRoutingModule, HttpClientModule, HeaderModule],

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -6,4 +6,14 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent  {}
+@Output()
+
+export class HeaderComponent  {
+
+    OnInit(){
+
+    }
+  onPropagar() {
+
+  }
+}
