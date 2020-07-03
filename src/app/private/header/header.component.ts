@@ -7,9 +7,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  @Output()
-  propagar = new EventEmitter<string>();
-  onPropagar() {
-    this.propagar.emit();
+  @Output() menuClick = new EventEmitter<void>();
+  onMenuClick() {
+    this.menuClick.emit();
   }
 }
