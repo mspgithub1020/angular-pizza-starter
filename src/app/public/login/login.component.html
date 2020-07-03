@@ -13,7 +13,7 @@
       </mat-form-field>
       <mat-form-field class="login__field"  appearance="fill">
         <mat-label>Enter a password</mat-label>
-        <input matInput name="password" type="password" [(ngModel)]="model.password" #password="ngModel">
+        <input required minlength="3" matInput name="password" type="password" [(ngModel)]="model.password" #password="ngModel">
         <mat-error *ngIf="password.invalid">
           {{errorsService.get(password, errors.password)}}
         </mat-error>
