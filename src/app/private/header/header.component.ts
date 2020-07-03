@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -6,14 +6,10 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-@Output()
-
-export class HeaderComponent  {
-
-    OnInit(){
-
-    }
+export class HeaderComponent {
+  @Output()
+  propagar = new EventEmitter<string>();
   onPropagar() {
-
+    this.propagar.emit();
   }
 }
