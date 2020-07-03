@@ -1,0 +1,5 @@
+.header {
+  justify-content: space-between;
+  background-color: var(--ps-color-primary);
+  color: var(--ps-color-on-primary);
+}

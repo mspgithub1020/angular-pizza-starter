@@ -12,7 +12,7 @@ export class AuthGuard implements CanActivate {
   ) { }
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): true | UrlTree {
     if (!this.authService.isAuthenticated) {
-      return this.router.parseUrl('/public/register');
+      return this.router.parseUrl('/public');
     }
     return true;
   }
