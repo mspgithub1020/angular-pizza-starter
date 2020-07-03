@@ -1,23 +1,17 @@
 import { NgModule } from '@angular/core';
 import { MenuComponent } from './menu.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
     MenuComponent
   ],
   imports: [
-    MenuComponent,
-    BrowserModule,
-    MatButtonModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    CommonModule
+    MatSidenavModule,
+    MatListModule
   ],
-  bootstrap: [
+  exports: [
     MenuComponent
   ]
 })
