@@ -13,4 +13,4 @@ import { PublicLayoutComponent } from './public-layout.component';
     MatToolbarModule
   ]
 })
-export class ToolbarModule { }
+export class PublicLayoutModule { }
