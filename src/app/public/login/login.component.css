@@ -1,0 +1,33 @@
+:host {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login {
+  width: 20%;
+  border: 1px solid var(--ps-color-primary);
+  border-radius: 3%;
+  padding: var(--ps-padding-medium);
+  background-color: rgb(221, 221, 233);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.58);
+}
+
+.login__field {
+  margin-bottom: 1rem;
+}
+
+.login__alert {
+  padding: var(--ps-padding-medium);
+  background-color: var(--ps-color-error);
+  color: var(--ps-color-on-primary);
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--ps-margin-medium);
+}
+
+.login__alert__icon {
+  font-size: var(--ps-font-small);
+}
