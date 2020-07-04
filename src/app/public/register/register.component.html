@@ -1,9 +1,8 @@
 <h2>Register</h2>
 <form class="register vertical" (ngSubmit)="onSubmit()" #form="ngForm">
-  <div role="alert" class="register__alert horizontal" *ngIf="registerError">
-    <mat-icon>error</mat-icon>
-    {{registerError}}
-  </div>
+
+  <ps-form-alert class="horizontal" [error]="registerError"></ps-form-alert>  
+
   <mat-form-field class="register__field" appearance="fill">
     <mat-label>Enter your user name</mat-label>
     <input matInput name="name" [(ngModel)]="model.name" #name="ngModel" required>
@@ -27,3 +26,16 @@
   </mat-form-field>
   <button mat-raised-button type="submit" color="primary">Register now</button>
 </form>
+
+
+<!--
+  <div role="alert" class="register__alert horizontal" *ngIf="registerError">
+    <mat-icon>error</mat-icon>
+    {{registerError}}
+  </div>
+
+  <ps-form-alert class="horizontal" [error]="registerError"></ps-form-alert>
+
+
+
+-->
