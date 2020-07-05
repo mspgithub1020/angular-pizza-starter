@@ -10,11 +10,15 @@ import { NgForOf } from '@angular/common';
 })
 
 export class MenuComponent {
-  @Input() sidenav: MenuComponent;
-  @Output() myEvent = new EventEmitter();
+  @Input() 
+  sidenav: MenuComponent;
+
+  @Output()
+  myEvent = new EventEmitter();
   onClick(){
     this.myEvent.emit(new EventEmitter());
   }
+  
   
   
 }
