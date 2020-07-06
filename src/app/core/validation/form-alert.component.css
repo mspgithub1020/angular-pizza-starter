@@ -1,0 +1,14 @@
+:host {  
+  margin: auto;     
+}
+
+.form__alert {
+  padding: var(--ps-padding-small);
+  background-color: var(--ps-color-error);
+  color: var(--ps-color-on-primary);
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--ps-margin-small);
+}
+
+

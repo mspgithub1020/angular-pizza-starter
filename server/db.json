@@ -58,6 +58,12 @@
       "email": "test5@gmail.com",
       "name": "test5",
       "password": "$2b$10$T05fQc0IerPcxvzFoqtKK.Uk2dXRhXRiheDyzO21eCrfac2Qbp.NS"
+    },
+    {
+      "id": "52c04d9e-78d5-42d8-b091-3b6615d40bd1",
+      "email": "s@s.com",
+      "name": "s",
+      "password": "$2b$10$sOMPbRfHn6uD1DV2YSADPu96U5UPFLnwfhS51PNReMtdggHgS.a8y"
     }
   ],
   "pizzas": [
