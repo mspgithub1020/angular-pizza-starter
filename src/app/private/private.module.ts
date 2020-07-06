@@ -9,7 +9,15 @@ import { LogoutModule } from './logout/logout.module';
 
 @NgModule({
   declarations: [PrivateComponent],
-  imports: [PrivateRoutingModule, HttpClientModule, HeaderModule, LogoutModule],
-  providers: [APIInterceptorProvider, AuthInterceptorProvider],
+  imports: [
+     PrivateRoutingModule,
+     HttpClientModule,
+     HeaderModule,
+     LogoutModule
+    ],
+  providers: [
+    APIInterceptorProvider,
+     AuthInterceptorProvider
+    ],
 })
 export class PrivateModule {}
