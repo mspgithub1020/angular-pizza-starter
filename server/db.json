@@ -58,6 +58,12 @@
       "email": "a.peinado.sevilla@gmail.com",
       "name": "antonio peinado sevilla",
       "password": "$2b$10$zwBFZxr0qf0zJK1lYBMuZuHYfz1z7PQL88t69lP5AooG46.0tS8pS"
+    },
+    {
+      "id": "56db1434-3808-4588-a98d-956ce1c6472c",
+      "email": "aps-65@hotmail.com",
+      "name": "antonio peinado sevilla",
+      "password": "$2b$10$caOWjxc79.j/3roYmMnSGOiPrfqpkh.iKf47i0TS2sFPDuAvkDb9u"
     }
   ],
   "pizzas": [
