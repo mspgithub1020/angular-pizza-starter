@@ -11,10 +11,12 @@ const routes: Routes = [
       {
         path: 'pizzas',
         loadChildren: () => import('./pizza/pizza.module').then((m) => m.PizzaModule)
-      }
-    ]
-  }
-];
+      },
+      { path: 'header',
+        loadChildren: () => import('./header/header.module').then(m => m.HeaderModule)
+   }
+  ]
+  }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
