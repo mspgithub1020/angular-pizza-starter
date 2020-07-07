@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class LogoutComponent {
   constructor(private router: Router, private authService: AuthService) {}
 
-   _authService = this.authService;
+  _authService = this.authService;
 
   redirect() {
     this.router.navigate(['../../public/login/login.module']);
