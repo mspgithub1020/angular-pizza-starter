@@ -7,7 +7,7 @@ import { Component , Input } from '@angular/core';
     styleUrls: ['./comment-list.component.css']
 })
  
-export class CommentItemComponent{
+export class CommentListComponent{
 
     @Input() comments: [];
     

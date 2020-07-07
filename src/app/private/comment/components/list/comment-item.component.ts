@@ -9,7 +9,7 @@ import { Component , Input } from '@angular/core';
  
 export class CommentItemComponent{
 
-    @Input() comentario: any = {};
+    @Input() comentario : any = {};
 
 
 

@@ -6,11 +6,20 @@ import { APIInterceptorProvider } from '../core/http/api.interceptor';
 import { AuthInterceptorProvider } from './services/http/auth.interceptor';
 import { HeaderModule } from './header/header.module';
 
+import { CommonModule } from '@angular/common';
+import { CommentListModule } from './comment/components/list/comment-list.module';
+
 
 
 @NgModule({
   declarations: [PrivateComponent],
-  imports: [PrivateRoutingModule, HttpClientModule, HeaderModule],
+  imports: [
+    PrivateRoutingModule,
+    HttpClientModule, 
+    HeaderModule,
+    CommonModule,
+    CommentListModule
+  ],
   providers: [APIInterceptorProvider, AuthInterceptorProvider],
 })
 export class PrivateModule {}
