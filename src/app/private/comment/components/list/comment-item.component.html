@@ -1,9 +1,8 @@
 <div >
-    <div>{{comentario.text}}</div>
-    <div>{{comentario.created}}</div>
-    <div>{{comentario.score}}</div>
-    <div>{{comentario.user}}</div>
-    <div>{{comentario.pizza}}</div>
+    <div>{{comment.text}}</div>
+    <div>{{comment.created | date: "dd/MM/yyyy" }}</div>
+    <div>{{comment.score}}</div>
+    <div>{{comment.user.name}}</div>
 </div>
 
 
