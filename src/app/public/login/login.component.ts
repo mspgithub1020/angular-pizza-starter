@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ErrorsService } from '../../core/validation/errors.service';
 import { LoginService } from './login.service';
@@ -12,7 +12,7 @@ import { AuthService } from 'src/app/core/auth/auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-export class LoginComponent  {
+export class LoginComponent {
   @ViewChild('form') form: FormGroup;
 
   model = {
@@ -37,7 +37,7 @@ export class LoginComponent  {
     private loginService: LoginService,
     private router: Router,
     private authService: AuthService
-  ) {}
+  ) { }
 
 
   onSubmit() {
@@ -52,10 +52,10 @@ export class LoginComponent  {
   private onLoginSuccess = (data: { token: string }) => {
     this.authService.token = data.token;
     this.router.navigateByUrl('/', { replaceUrl: true });
-  };
+  }
   private onLoginError = (res: HttpErrorResponse) => {
     const error =
       res.status === 401 ? 'Incorrect credentials' : 'Unexpected error';
     this.loginError = error;
-  };
+  }
 }

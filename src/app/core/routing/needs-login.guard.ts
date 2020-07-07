@@ -5,14 +5,14 @@ import { AuthService } from '../auth/auth.service';
 @Injectable({
   providedIn: 'root',
 })
-export class AuthGuard implements CanActivate {
+export class NeedsLoginGuard implements CanActivate {
   constructor(
     private authService: AuthService,
     private router: Router
   ) { }
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): true | UrlTree {
-    if (!this.authService.isAuthenticated) {
-      return this.router.parseUrl('/public');
+    if (this.authService.isAuthenticated) {
+      return this.router.parseUrl('/');
     }
     return true;
   }

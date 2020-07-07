@@ -8,13 +8,12 @@ import { AuthService } from 'src/app/core/auth/auth.service';
 export class PublicComponent implements OnInit {
   constructor(private router: Router, private authService: AuthService) {}
   ngOnInit() {
-    this._checkIfLogedIn();
+    this.checkIfLogedIn();
   }
-  _checkIfLogedIn() {
+  private checkIfLogedIn() {
     if (this.authService.isAuthenticated) {
       this.router.navigateByUrl('/', {
         replaceUrl: true,
-        // this.router.navigateByUrl('/private');
       });
     }
   }
