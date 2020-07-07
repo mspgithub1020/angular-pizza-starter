@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CommentItemComponent } from './comment-item.component';
 
 import { MatIconModule } from '@angular/material/icon';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { MatIconModule } from '@angular/material/icon';
     CommentItemComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatExpansionModule
   ]
 })
 export class CommentItemModule {}

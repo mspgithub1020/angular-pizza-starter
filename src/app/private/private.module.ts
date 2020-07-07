@@ -11,6 +11,7 @@ import { CommentListModule } from './comment/components/list/comment-list.module
 
 
 
+
 @NgModule({
   declarations: [PrivateComponent],
   imports: [
@@ -19,6 +20,7 @@ import { CommentListModule } from './comment/components/list/comment-list.module
     HeaderModule,
     CommonModule,
     CommentListModule
+    
   ],
   providers: [APIInterceptorProvider, AuthInterceptorProvider],
 })
