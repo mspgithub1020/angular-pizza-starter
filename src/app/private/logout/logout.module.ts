@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { LogoutComponent } from './logout.component'
 import { RouterModule } from '@angular/router';
+import { LogoutService } from './logout.service';
 
 
 @NgModule({
@@ -11,8 +12,8 @@ import { RouterModule } from '@angular/router';
     MatButtonModule,
     MatIconModule,
     RouterModule,
-
   ],
   exports: [LogoutComponent],
+  providers: [LogoutService]
 })
 export class LogoutModule {}
