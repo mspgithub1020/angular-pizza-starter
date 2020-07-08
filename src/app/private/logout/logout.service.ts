@@ -2,11 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HTTPService } from 'src/app/core/http/http.service';
 @Injectable()
-export class IngredientService extends HTTPService {
+export class LogoutService extends HTTPService {
   constructor(http: HttpClient) {
-    super(http, 'ingredients');
+    super(http, 'logout');
   }
-  getAll(){
-    return this.http.get(this.resolve()).toPromise()
+  logout(){
+    // TODO: si devuelve 401 refrescar y reintentar
+    return this.http.post(this.resolve(), null).toPromise();
   }
 }
+
