@@ -2,39 +2,30 @@
     <mat-expansion-panel hideToggle>
         <mat-expansion-panel-header>
             <mat-panel-title>
-                {{comentario.created}}
+                {{comment.created | date:'dd/MM/yyyy'}}
             </mat-panel-title>
             <mat-panel-description>
-                {{comentario.score}}
+                <mat-icon *ngFor="let color of getStars(comment.score)" class="icon--{{color}}">
+                    <p *ngIf="color==='black'; else white">star</p>
+                    <ng-template #white><p>star_border</p></ng-template>                                                 
+                </mat-icon>    
             </mat-panel-description>
         </mat-expansion-panel-header>
-        <p>{{comentario.text}}</p>
+        <p>{{comment.text}}</p>
     </mat-expansion-panel>    
 </mat-accordion>
 
 
 
-<!--
-    <div >
-    <div>{{comentario.text}}</div>
-    <div>{{comentario.created}}</div>
-    <div>{{comentario.score}}</div>
-    <div>{{comentario.user}}</div>
-    <div>{{comentario.pizza}}</div>
-    </div>
+<!--"`icon--${color}`"
+    icon--{{color}}
+    <p *ngIf="color='black'; else white">star</p>
+    <ng-template #white><p>stars</p></ng-template> 
 
-<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                Self aware panel
-            </mat-panel-title>
-            <mat-panel-description>
-                Currently I am {{panelOpenState ? 'open' : 'closed'}}
-            </mat-panel-description>
-        </mat-expansion-panel-header>
-        <p>I'm visible because I am open</p>
-    </mat-expansion-panel>
+    {{color}}==='black'?star:star_border 
 
 
+    <p *ngIf="color==='black'; else white">star</p>
+    <ng-template #white><p>star_border</p></ng-template>
 
-  -->
+-->

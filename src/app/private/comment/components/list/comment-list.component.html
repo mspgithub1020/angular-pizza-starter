@@ -1,5 +1,5 @@
-<ul>
-    <li *ngFor="let comment of comments" >
+<ul class="comment">
+    <li *ngFor="let comment of comments" class="comment__list">
         <ps-comment-item [comment]="comment"></ps-comment-item>
     </li>
 </ul>
