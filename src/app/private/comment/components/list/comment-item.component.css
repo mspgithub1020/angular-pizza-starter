@@ -1,0 +1,6 @@
+.icon--dark{
+    color: var(--ps-color-primary--dark);
+}
+.icon--light{
+    color:var(--ps-color-primary--light);
+}

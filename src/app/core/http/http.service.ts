@@ -5,6 +5,7 @@
 import { HttpClient } from '@angular/common/http';
 
 export class HTTPService {
+  [x: string]: any;
   constructor(
     protected http: HttpClient,
     private path: string,

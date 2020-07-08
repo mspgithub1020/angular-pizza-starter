@@ -7,16 +7,20 @@ import { AuthInterceptorProvider } from './services/http/auth.interceptor';
 import { HeaderModule } from './header/header.module';
 import { PizzaListModule } from './pizza/pages/list/pizza-list.module';
 
+import { CommonModule } from '@angular/common';
+//import { CommentListModule } from './comment/components/list/comment-list.module';
+
+//import { LogoutModule } from './logout/logout.module';
+
 @NgModule({
   declarations: [PrivateComponent],
   imports: [
     PrivateRoutingModule,
     HttpClientModule,
-    HeaderModule, PizzaListModule
+    HeaderModule,
+    CommonModule,
+    PizzaListModule,
   ],
-  providers: [
-    APIInterceptorProvider,
-    AuthInterceptorProvider
-  ],
+  providers: [APIInterceptorProvider, AuthInterceptorProvider],
 })
-export class PrivateModule { }
+export class PrivateModule {}

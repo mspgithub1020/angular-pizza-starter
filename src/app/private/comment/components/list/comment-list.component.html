@@ -1,0 +1,7 @@
+<ul class="comment">
+  <mat-accordion>
+    <li *ngFor="let comment of comments" class="comment__list">
+      <ps-comment-item [comment]="comment"></ps-comment-item>
+    </li>
+  </mat-accordion>
+</ul>

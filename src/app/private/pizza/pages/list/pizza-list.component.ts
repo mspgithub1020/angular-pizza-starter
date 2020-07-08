@@ -1,6 +1,6 @@
-
-import { Component, Input } from '@angular/core';
-import { Pizza } from './pizzas';
+import { Component, OnInit, Input,  } from '@angular/core';
+import { PizzaService } from '../../services/pizza-list.service';
+import { Pizza } from './pizzas'
 
 @Component({
   selector: 'ps-pizzalist',
@@ -8,6 +8,5 @@ import { Pizza } from './pizzas';
   styleUrls: ['./pizza-list.component.css'],
 })
 export class PizzaListComponent {
-  @Input() pizzas: Pizza[] = [];
-
+  @Input() pizza: Pizza[] = [];
 }

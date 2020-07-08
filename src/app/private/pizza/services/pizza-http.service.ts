@@ -6,7 +6,8 @@ export class PizzaService extends HTTPService {
   constructor(http: HttpClient) {
     super(http, 'pizzas');
   }
-  create(model){
-    return this.http.post(this.resolve(), model).toPromise()
+  create(model) {
+    return this.http.post(this.resolve(), model).toPromise();
   }
+
 }

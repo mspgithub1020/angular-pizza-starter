@@ -1,0 +1,9 @@
+.comment{
+    width: 80%;
+    margin: auto;
+    margin-top: var(--ps-margin-big);
+    list-style: none;
+}
+.comment__list{    
+    margin-bottom: var(--ps-margin-big);    
+}

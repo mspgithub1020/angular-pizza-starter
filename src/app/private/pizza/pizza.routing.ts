@@ -5,7 +5,12 @@ const routes: Routes = [
   {
     path: 'add',
     loadChildren: () => import('./pages/add/pizza-add.module').then(m => m.PizzaAddModule),
-    
+
+  },
+   {
+    path: 'pizza',
+    loadChildren: () => import('./pages/list/pizza-list.module').then(m => m.PizzaListModule),
+
   }
 ];
 @NgModule({

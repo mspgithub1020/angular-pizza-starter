@@ -1,17 +1,16 @@
-import { MatButtonModule } from '@angular/material/button';
 import { NgModule } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { PizzaListComponent } from './pizza-list.component';
+import { PizzaRoutingModule } from '../../pizza.routing';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [PizzaListComponent],
   imports: [
-    MatButtonModule,
-    MatIconModule,
+    CommonModule,
     RouterModule,
-    MatCardModule
-  ],
+    MatCardModule,
+    PizzaRoutingModule],
   exports: [PizzaListComponent],
   providers: [PizzaListComponent],
 })
