@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import {Comment} from '../../comment';
+import { Comment } from '../../comment';
 
 @Component({
   selector: 'ps-comment-item',
@@ -10,18 +10,14 @@ import {Comment} from '../../comment';
 export class CommentItemComponent {
   @Input() comment: Comment;
 
-  getStars(score){
-
+  getStars(score) {
     const color = [];
     const limit = 10;
     const dif = limit - score;
-
-    for(var i = 0 ; i < limit ; i++){
-      (i < dif ? color.push('black') : color.push('white'))
+    for (let i = 0; i < limit; i++) {
+      color.push(i < dif ? 'dark' : 'light');
     }
-
     return color;
-
   }
 
 

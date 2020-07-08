@@ -1,6 +1,6 @@
-.icon--black{
+.icon--dark{
     color: var(--ps-color-primary--dark);
 }
-.icon--white{
+.icon--light{
     color:var(--ps-color-primary--light);
 }
