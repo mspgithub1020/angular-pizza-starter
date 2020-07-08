@@ -4,13 +4,8 @@
       {{comment.created | date:'dd/MM/yyyy'}}
     </mat-panel-title>
     <mat-panel-description>
-      <mat-icon *ngFor="let color of getStars(comment.score)" class="icon--{{color}}">
-        <ng-container *ngIf="color==='dark'; else light">
-          star
-        </ng-container>
-        <ng-template #light>
-          star_border
-        </ng-template>
+      <mat-icon *ngFor="let color of getStars(comment.score)" [attr.class]="getIconClasses(color)">
+        {{getIcon(color)}}
       </mat-icon>
     </mat-panel-description>
   </mat-expansion-panel-header>
@@ -19,15 +14,11 @@
 
 
 
-<!--"`icon--${color}`"
-    icon--{{color}}
-    <p *ngIf="color='black'; else white">star</p>
-    <ng-template #white><p>stars</p></ng-template>
-
-    {{color}}==='black'?star:star_border
-
-
-    <p *ngIf="color==='black'; else white">star</p>
-    <ng-template #white><p>star_border</p></ng-template>
-
+<!--MODIFICAREMOS ESTE CODIGO DE LA TEMPLATE DIRECTAMENTE EN LA CLASE
+    <ng-container *ngIf="color==='dark'; else light">
+          star
+    </ng-container>
+    <ng-template #light>
+          star_border
+    </ng-template>
 -->
