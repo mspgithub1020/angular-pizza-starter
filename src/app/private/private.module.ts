@@ -16,11 +16,9 @@ import { CommentListModule } from './comment/components/list/comment-list.module
   declarations: [PrivateComponent],
   imports: [
     PrivateRoutingModule,
-    HttpClientModule, 
+    HttpClientModule,
     HeaderModule,
     CommonModule,
-    CommentListModule
-    
   ],
   providers: [APIInterceptorProvider, AuthInterceptorProvider],
 })
