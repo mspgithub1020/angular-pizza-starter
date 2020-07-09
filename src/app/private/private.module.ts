@@ -7,7 +7,7 @@ import { AuthInterceptorProvider } from './services/http/auth.interceptor';
 import { HeaderModule } from './header/header.module';
 
 import { CommonModule } from '@angular/common';
-import { CommentListModule } from './comment/components/list/comment-list.module';
+import { CommentListModule } from './comment/list/comment-list.module';
 
 import { LogoutModule } from './logout/logout.module';
 

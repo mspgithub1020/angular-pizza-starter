@@ -8,7 +8,7 @@ export class CommentService extends HTTPService {
   constructor(http: HttpClient) {
     super(http, 'comment');
   }
-  register(model) {
+  comment(model) {
     return this.http.post(this.resolve(), model).toPromise();
   }
 }

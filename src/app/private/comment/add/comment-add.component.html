@@ -1,0 +1,13 @@
+<h1>Crear Comentario</h1>
+<form class="comment vertical" (ngSubmit)="onSubmit()" #form="ngForm">
+    <mat-form-field class="comment__field" appearance="fill">
+        <mat-label>Enter your score</mat-label>
+        <input matInput name="score" [(ngModel)]="model.score" #name="ngModel" required>
+        <mat-error *ngIf="name.invalid">
+          {{errorsService.get(name, errors.name)}}
+        </mat-error>
+    </mat-form-field>
+
+
+
+</form>
