@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'list',
-    loadChildren: () => import('./pages/list/pizza-list.module').then(m => m.PizzaListModule),
+    loadChildren: () => import('./pages/list/pizza-list.module').then((m) => m.PizzaListModule),
   },
   {
     path: '',

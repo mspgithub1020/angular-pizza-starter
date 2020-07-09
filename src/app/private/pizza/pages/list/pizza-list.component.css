@@ -1,0 +1,6 @@
+.pizza-list {
+  display:grid;
+  justify-content: space-around;
+  margin-bottom: var(--ps-margin-medium);
+}
+

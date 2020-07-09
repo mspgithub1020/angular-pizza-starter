@@ -3,31 +3,31 @@ import { Router } from '@angular/router';
 import { PizzaService } from '../../services/pizza-list.service';
 import { Pizza } from '../../pizza';
 
+
 @Component({
   selector: 'ps-pizzalist',
   templateUrl: './pizza-list.component.html',
   styleUrls: ['./pizza-list.component.css'],
-  providers: [PizzaService]
+  providers: [PizzaService],
 })
 export class PizzaListComponent implements OnInit {
-  pizzas: Pizza[] = [];
-  constructor(private pizzaService: PizzaService, private router: Router) { }
+  // pizzas: Pizza[] = [];
+  constructor(private pizzaService: PizzaService, private router: Router) {}
+  pizzas: any;
+
   ngOnInit() {
-
+    this.getPizzas();
   }
-  getPizzas(){
-
+  getPizzas() {
+    this.pizzaService.getAll().then((pizzas) => {
+      this.pizzas = pizzas;
+    });
   }
-  onPizzaClick(pizza: Pizza){
-
+  onPizzaClick(pizza: Pizza) {
+    return this.pizzaService.get(`/pizzas/${pizza.id}`)
   }
-  getPizzaImg(pizza: Pizza){
+  getPizzaImg(pizza: Pizza) {
+    return `http://localhost:3005${pizza.img}`;
 
   }
 }
-// modulo de rutas que cargue el componente en el path ''
-// componente pizza-list
-// utilizar el pizza-http.service para pedir todas las pizzas cuando se pinte
-// el componente (ngOnInit)
-// con un *ngFor tendras que pintar una card con la foto y el nombre de la pizza (img, name)
-// cuando se pinche en una card tendrás que navegar a /pizzas/:id
