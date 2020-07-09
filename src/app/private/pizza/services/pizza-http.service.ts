@@ -9,5 +9,7 @@ export class PizzaService extends HTTPService {
   create(model) {
     return this.http.post(this.resolve(), model).toPromise();
   }
-
+  getAll() {
+    return this.http.get(this.resolve()).toPromise();
+  }
 }
