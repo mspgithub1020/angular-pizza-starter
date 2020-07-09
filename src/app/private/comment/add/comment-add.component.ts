@@ -1,37 +1,34 @@
 import { Component, ViewChild } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 import { ErrorsService } from '../../../core/validation/errors.service';
 import { CommentService } from '../services/comment-http.service';
 
 @Component({
-    selector: 'ps-comment',
+    selector: 'ps-comment-add',
     templateUrl: './comment-add.component.html',
     styleUrls: ['./comment-add.component.css']
 })
 
-export class AddComponent{
-
-    @ViewChild('form') form: FormGroup;
-    @ViewChild('score') score: FormControl;
-    @ViewChild('text') text: FormControl;
+export class CommentAddComponent{
+  // TODO:input con el id de la pizza
+    @ViewChild('form') private form: NgForm;
 
     model = {
         score: '',
-        text: ''        
+        text: ''
     };
 
     constructor(
         public errorsService: ErrorsService,
         private commentService: CommentService,
-        private router: Router
     ) { }
 
     onSubmit() {
         if (this.form.invalid) {
           return;
         }
-        this.commentService.comment(this.model)
+        // TODO: mas el id de la pizza
+        this.commentService.create(this.model)
           .then(this.onCommentSuccess)
           .catch(this.onCommentError);
     }
@@ -41,7 +38,7 @@ export class AddComponent{
     }
 
     onCommentError(){
-        
+
     }
 
 }

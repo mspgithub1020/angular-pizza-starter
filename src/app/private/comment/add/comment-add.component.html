@@ -2,7 +2,11 @@
 <form class="comment vertical" (ngSubmit)="onSubmit()" #form="ngForm">
     <mat-form-field class="comment__field" appearance="fill">
         <mat-label>Enter your score</mat-label>
-        <input matInput name="score" [(ngModel)]="model.score" #name="ngModel" required>
+        <!--
+          TODO: usar validadores min max o interceptar el evento change para impedir
+          que se puedan introducir valores invalidos
+        -->
+        <input matInput type="number" name="score" [(ngModel)]="model.score" #name="ngModel" required>
         <mat-error *ngIf="name.invalid">
           {{errorsService.get(name, errors.name)}}
         </mat-error>

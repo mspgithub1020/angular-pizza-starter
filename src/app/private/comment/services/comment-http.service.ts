@@ -6,9 +6,9 @@ import { HTTPService } from 'src/app/core/http/http.service';
 
 export class CommentService extends HTTPService {
   constructor(http: HttpClient) {
-    super(http, 'comment');
+    super(http, 'comments');
   }
-  comment(model) {
+  create(model) {
     return this.http.post(this.resolve(), model).toPromise();
   }
 }
