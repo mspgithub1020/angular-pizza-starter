@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit, OnDestroy } from '@angular/core';
+import { Component, ViewChild, OnInit, OnDestroy, ElementRef } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ErrorsService } from 'src/app/core/validation/errors.service';
 import { IngredientService } from 'src/app/private/ingredient/services/ingredient-http.service';
@@ -14,6 +14,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 })
 export class PizzaAddComponent implements OnInit, OnDestroy {
   @ViewChild('form') form: NgForm;
+  @ViewChild('imgInput') imgInput: ElementRef<HTMLInputElement>
   model = {
     name: '',
     ingredients: [],
@@ -84,6 +85,14 @@ export class PizzaAddComponent implements OnInit, OnDestroy {
     if (this.form.invalid) {
       return;
     }
-    this.createPizza();
+    this.createPizza()
+    .then(()=>{
+        this.resetForm()
+    });
+  }
+  resetForm() {
+    this.clearImage();  
+    this.form.resetForm();
+    this.imgInput.nativeElement.value = '';
   }
 }
