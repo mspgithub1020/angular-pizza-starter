@@ -1,14 +1,29 @@
-import { Component, OnInit, Input,  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PizzaService } from '../../services/pizza-list.service';
-import { Pizza } from './pizzas'
+import { Pizza } from '../../pizza';
 
 @Component({
   selector: 'ps-pizzalist',
   templateUrl: './pizza-list.component.html',
   styleUrls: ['./pizza-list.component.css'],
+  providers: [PizzaService]
 })
-export class PizzaListComponent {
-  @Input() pizza: Pizza[] = [];
+export class PizzaListComponent implements OnInit {
+  pizzas: Pizza[] = [];
+  constructor(private pizzaService: PizzaService, private router: Router) { }
+  ngOnInit() {
+
+  }
+  getPizzas(){
+
+  }
+  onPizzaClick(pizza: Pizza){
+
+  }
+  getPizzaImg(pizza: Pizza){
+
+  }
 }
 // modulo de rutas que cargue el componente en el path ''
 // componente pizza-list

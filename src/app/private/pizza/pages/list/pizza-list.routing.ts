@@ -4,7 +4,7 @@ import { PizzaListComponent } from './pizza-list.component';
 
 const routes: Routes = [
   {
-    path: ' ',
+    path: '',
     component: PizzaListComponent,
   },
 ];
