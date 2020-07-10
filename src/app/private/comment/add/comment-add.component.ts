@@ -36,11 +36,12 @@ export class CommentAddComponent{
 
     createComment(){
         // TODO: mas el id de la pizza
-        this.commentService.create(this.model)
+        this.commentService.create({
+            pizza: this.id,
+            ...this.model})
           .then(this.onCommentSuccess)
           .catch(this.onCommentError);
     }
-
 
     onSubmit() {
         if (this.form.invalid) {
@@ -50,7 +51,7 @@ export class CommentAddComponent{
     }
 
     onCommentSuccess(){
-
+        this.form.resetForm();
     }
 
     onCommentError(){

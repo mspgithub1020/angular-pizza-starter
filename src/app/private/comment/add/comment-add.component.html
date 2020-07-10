@@ -13,13 +13,10 @@
   </mat-form-field>
   <mat-form-field class="" comment__field--text>
     <mat-label>Comentario</mat-label>
-    <textarea name="text" matInput type="text" placeholder="Valoracion a la Pizza" [(ngModel)]="model.text" #textModel="ngModel"
-      required>ejemplo</textarea>
+    <textarea name="text" matInput type="text" [(ngModel)]="model.text" #textModel="ngModel" required></textarea>
     <mat-error *ngIf="text.invalid">
       {{errorsService.get(textModel, errors.text)}}
     </mat-error>
   </mat-form-field>
-
-
-
+  <button mat-raised-button color="primary">Crear</button>
 </form>
