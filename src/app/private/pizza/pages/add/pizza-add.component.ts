@@ -79,6 +79,7 @@ export class PizzaAddComponent implements OnInit, OnDestroy {
       URL.revokeObjectURL(this.imageUrl);
       this.imageUrl = '';
       this.imageName = '';
+      this.sanitizedImageUrl = '';
     }
   }
   onSubmit() {
@@ -91,7 +92,7 @@ export class PizzaAddComponent implements OnInit, OnDestroy {
     });
   }
   resetForm() {
-    this.clearImage();  
+    this.clearImage();
     this.form.resetForm();
     this.imgInput.nativeElement.value = '';
   }
