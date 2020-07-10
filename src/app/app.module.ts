@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { APIInterceptorProvider } from './core/http/api.interceptor';
+import { RefreshService } from './core/auth/refresh.service';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { APIInterceptorProvider } from './core/http/api.interceptor';
     BrowserAnimationsModule,
 
   ],
-  providers: [APIInterceptorProvider],
+  providers: [APIInterceptorProvider, RefreshService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

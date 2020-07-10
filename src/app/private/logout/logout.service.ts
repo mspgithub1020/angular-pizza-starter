@@ -8,7 +8,7 @@ export class LogoutService extends HTTPService {
   }
   logout(){
     // TODO: si devuelve 401 refrescar y reintentar
-    return this.http.post(this.resolve(), null).toPromise();
+    return this.http.post(this.resolve(), null, {withCredentials: true}).toPromise();
   }
 }
 

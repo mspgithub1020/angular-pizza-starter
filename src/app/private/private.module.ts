@@ -7,6 +7,8 @@ import { AuthInterceptorProvider } from './services/http/auth.interceptor';
 import { HeaderModule } from './header/header.module';
 import { PizzaListModule } from './pizza/pages/list/pizza-list.module';
 import { CommonModule } from '@angular/common';
+import { RetryInterceptor } from './services/http/retry.interceptor';
+import { RefreshService } from '../core/auth/refresh.service';
 
 @NgModule({
   declarations: [PrivateComponent],
@@ -17,6 +19,11 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     PizzaListModule,
   ],
-  providers: [APIInterceptorProvider, AuthInterceptorProvider],
+  providers: [
+    APIInterceptorProvider,
+    AuthInterceptorProvider,
+    RetryInterceptor,
+    RefreshService
+  ],
 })
 export class PrivateModule {}

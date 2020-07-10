@@ -9,6 +9,11 @@ const routes: Routes = [
     component: PrivateComponent,
     children: [
       {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'pizzas'
+      },
+      {
         path: 'pizzas',
         loadChildren: () => import('./pizza/pizza.module').then((m) => m.PizzaModule)
       }
