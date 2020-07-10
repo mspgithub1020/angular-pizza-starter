@@ -1,29 +1,17 @@
-import { Component } from '@angular/core';
-import { Input, Output, EventEmitter } from '@angular/core';
-import { NgForOf } from '@angular/common';
-
-
+import { Component, Input, Output, EventEmitter, Inject } from '@angular/core';
+import { menuOptionsToken, menuOptionsProvider } from './menu-options.provider';
 @Component({
   selector: 'ps-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['menu.component.css'],
+  styleUrls: ['./menu.component.css'],
+  providers: [menuOptionsProvider],
 })
-
 export class MenuComponent {
-  @Input() 
-  sidenav: MenuComponent;
-
-  @Output()
-  myEvent = new EventEmitter();
-  onClick(){
-    this.myEvent.emit(new EventEmitter());
+  @Input() opened = true;
+  @Output() openedChange = new EventEmitter<boolean>();
+  constructor(@Inject(menuOptionsToken) public menuOptions) {}
+  close() {
+    this.opened = false;
+    this.openedChange.emit(false);
   }
-  
-  
-  
 }
- // @Input para cambiar el estado del sidenav
- // Cuando se pulse en un enlace se cierre el sidenav
- // Cuando se cierre el sidenav notifica con un @Output de que se ha cerrado
- // [MenuItems] y pintas todos con un ngFor (label, link, icon)
-

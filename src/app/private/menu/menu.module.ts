@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 import { MenuComponent } from './menu.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list';
 
 @NgModule({
-  declarations: [
-    MenuComponent
-  ],
+  declarations: [MenuComponent],
   imports: [
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatIconModule,
+    RouterModule,
+    CommonModule,
   ],
-  exports: [
-    MenuComponent
-  ]
+
+  exports: [MenuComponent],
 })
 export class MenuModule {}
