@@ -1,2 +1,0 @@
-// obtener comentarios
-// crear comentario

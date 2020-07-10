@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PizzaService } from '../../services/pizza-list.service';
+import { PizzaService } from '../../services/pizza-http.service';
 import { Pizza } from '../../pizza';
 import { PizzaImgService } from '../../services/pizza-img.service';
 

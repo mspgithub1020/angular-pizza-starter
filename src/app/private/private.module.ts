@@ -7,7 +7,7 @@ import { AuthInterceptorProvider } from './services/http/auth.interceptor';
 import { HeaderModule } from './header/header.module';
 import { PizzaListModule } from './pizza/pages/list/pizza-list.module';
 import { CommonModule } from '@angular/common';
-import { RetryInterceptor } from './services/http/retry.interceptor';
+import { RetryInterceptorProvider } from './services/http/retry.interceptor';
 import { RefreshService } from '../core/auth/refresh.service';
 import { MenuModule } from './menu/menu.module';
 
@@ -24,7 +24,7 @@ import { MenuModule } from './menu/menu.module';
   providers: [
     APIInterceptorProvider,
     AuthInterceptorProvider,
-    RetryInterceptor,
+    RetryInterceptorProvider,
     RefreshService
   ],
 })
