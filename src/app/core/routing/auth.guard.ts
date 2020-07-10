@@ -1,4 +1,4 @@
-import { Injectable, Inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router, UrlTree } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
 
@@ -12,7 +12,7 @@ export class AuthGuard implements CanActivate {
   ) { }
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): true | UrlTree {
     if (!this.authService.isAuthenticated) {
-      return this.router.parseUrl('/public/register');
+      return this.router.parseUrl('/public');
     }
     return true;
   }

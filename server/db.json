@@ -34,6 +34,36 @@
       "email": "test1@test.com",
       "name": "foo",
       "password": "$2b$10$LpY/7vlt62sNP6KaGQfwRujEv86Z/O/VPb55td0q2ezJJKY3ShAiy"
+    },
+    {
+      "id": "08106f05-c916-477b-9b80-ee16365cdde5",
+      "email": "belen.aguirre.de.carcer.rojo@gmail.com",
+      "name": "blenchu",
+      "password": "$2b$10$h2O4tbvNB4ldpp/qmnsove6WltpNSP3t6crQnIw6ZgO/jEhN8FGoG"
+    },
+    {
+      "id": "a003e067-2fe6-4933-b690-4b2e09b469d1",
+      "email": "mario@gmail.com",
+      "name": "mario",
+      "password": "$2b$10$eXn.PQ.amt3onB18h9.Bi.1xwiX2XgCWd.dxj6lXmQaVlZem9xp6i"
+    },
+    {
+      "id": "db74ab64-2bf8-45e9-9247-af33d5e3f584",
+      "email": "test@test2.com",
+      "name": "test",
+      "password": "$2b$10$v0ysTl/9Mx5w3WT5YLsDjOoSl1zRVRP38lx1I8FFR7tbOuyfs5sxq"
+    },
+    {
+      "id": "55f3bd54-65db-4fcb-8187-0e01af915f61",
+      "email": "test5@gmail.com",
+      "name": "test5",
+      "password": "$2b$10$T05fQc0IerPcxvzFoqtKK.Uk2dXRhXRiheDyzO21eCrfac2Qbp.NS"
+    },
+    {
+      "id": "d7b08e85-2321-4fc6-a374-fe1cbcc17d79",
+      "email": "a.peinado.sevilla@gmail.com",
+      "name": "antonio peinado sevilla",
+      "password": "$2b$10$lXrIXLkVKrrp6gly.j.q.eRB5NNMfF1FdpAPWi3nsU/nHjvcnecL2"
     }
   ],
   "pizzas": [

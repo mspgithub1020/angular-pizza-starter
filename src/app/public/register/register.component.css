@@ -1,9 +1,10 @@
 :host {
-  width: 80%;
+  width: 85%;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .register {
@@ -11,7 +12,7 @@
   border: 1px solid var(--ps-color-primary);
   border-radius: 3%;
   padding: var(--ps-padding-medium);
-  background-color: rgb(221, 221, 233);
+  background-color: rgba(238, 244, 245,0.60);
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.58);
 }
 

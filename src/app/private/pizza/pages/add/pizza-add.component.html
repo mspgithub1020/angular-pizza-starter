@@ -1,0 +1,38 @@
+<h2>Añadir pizza</h2>
+<form class="pizzaAdd vertical" (ngSubmit)="onSubmit()" #form="ngForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Pizza name</mat-label>
+    <input matInput name="name" [(ngModel)]="model.name" #name="ngModel" required>
+    <mat-error *ngIf="name.invalid">
+      {{errorsService.get(name, errors.name)}}
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="pizzaAdd__field" appearance="fill">
+    <mat-label>Select ingredients</mat-label>
+    <mat-select name="ingredients" [(ngModel)]="model.ingredients" #ingredientsModel="ngModel" required multiple>
+      <mat-option *ngFor="let ingredient of ingredients" [value]="ingredient.id">
+        {{ingredient.name}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="ingredientsModel.invalid">
+      {{errorsService.get(ingredientsModel, errors.ingredients)}}
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="pizzaAdd__field" appearance="fill">
+    <mat-label>Image</mat-label>
+    <input matInput name="img" [ngModel]="imageName" type="text" readonly #img="ngModel" (click)="imgInput.click()" required>
+    <mat-error *ngIf="img.invalid">
+      {{errorsService.get(img, errors.img)}}
+    </mat-error>
+  </mat-form-field>
+  <input hidden type="file" #imgInput (change)="onFileChange(imgInput.files)" />
+  <img *ngIf="sanitizedImageUrl" [src]="sanitizedImageUrl" alt="Imagen cargada">
+  <button mat-raised-button type="submit" color="primary">Add pizza</button>
+</form>
+
+<!--
+    6. Después de enviar el formulario correctamente, resetearlo.
+
+    html input file image preview:
+    https://stackoverflow.com/questions/4459379/preview-an-image-before-it-is-uploaded
+ -->

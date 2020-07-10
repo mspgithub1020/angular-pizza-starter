@@ -8,9 +8,12 @@ const routes: Routes = [
     path: '',
     component: PrivateComponent,
     children: [
-    ]
-  }
-];
+      {
+        path: 'pizzas',
+        loadChildren: () => import('./pizza/pizza.module').then((m) => m.PizzaModule)
+      }
+  ]
+  }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

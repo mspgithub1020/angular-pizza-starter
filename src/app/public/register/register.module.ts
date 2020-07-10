@@ -7,7 +7,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { RegisterComponent } from './register.component';
 import { RegisterRoutingModule } from './register.routing';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+
+import { FormAlertModule } from '../../core/validation/form-alert.module'
+
 @NgModule({
   declarations: [RegisterComponent],
   imports: [
@@ -18,7 +21,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    FormAlertModule
   ]
 })
 export class RegisterModule { }

@@ -1,0 +1,24 @@
+<mat-expansion-panel hideToggle>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{comment.created | date:'dd/MM/yyyy'}}
+    </mat-panel-title>
+    <mat-panel-description>
+      <mat-icon *ngFor="let color of getStars(comment.score)" [attr.class]="getIconClasses(color)">
+        {{getIcon(color)}}
+      </mat-icon>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <p>{{comment.text}}</p>
+</mat-expansion-panel>
+
+
+
+<!--MODIFICAREMOS ESTE CODIGO DE LA TEMPLATE DIRECTAMENTE EN LA CLASE
+    <ng-container *ngIf="color==='dark'; else light">
+          star
+    </ng-container>
+    <ng-template #light>
+          star_border
+    </ng-template>
+-->

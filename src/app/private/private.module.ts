@@ -4,18 +4,19 @@ import { PrivateComponent } from './private.component';
 import { HttpClientModule } from '@angular/common/http';
 import { APIInterceptorProvider } from '../core/http/api.interceptor';
 import { AuthInterceptorProvider } from './services/http/auth.interceptor';
-import { MenuModule } from './menu/menu.module';
+import { HeaderModule } from './header/header.module';
+import { PizzaListModule } from './pizza/pages/list/pizza-list.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [PrivateComponent],
   imports: [
     PrivateRoutingModule,
     HttpClientModule,
-    MenuModule
+    HeaderModule,
+    CommonModule,
+    PizzaListModule,
   ],
-  providers: [
-    APIInterceptorProvider,
-    AuthInterceptorProvider
-  ]
+  providers: [APIInterceptorProvider, AuthInterceptorProvider],
 })
 export class PrivateModule {}

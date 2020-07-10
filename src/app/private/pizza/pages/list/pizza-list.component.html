@@ -1,0 +1,13 @@
+<ul class='pizza-list'>
+  <li *ngFor="let pizza of pizzas" class='pizza-list__item'>
+     <mat-card (click)="onPizzaClick(pizza)" tabindex="0">
+      <mat-card-header >
+        <mat-card-title>
+          {{pizza.name}}
+        </mat-card-title>
+
+      </mat-card-header>
+      <img mat-card-image [src]="getPizzaImg(pizza)" alt="" />
+    </mat-card>
+  </li>
+</ul>
