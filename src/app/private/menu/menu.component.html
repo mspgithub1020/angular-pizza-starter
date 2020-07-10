@@ -1,0 +1,18 @@
+<mat-sidenav-container class="menu" (backdropClick)="close()">
+  <mat-sidenav class="menu--nav" [opened]="opened">
+    <img class="menu--img" src="assets/img/pizza-icon.png">
+    <mat-nav-list>
+      <mat-list-item *ngFor="let option of menuOptions">
+        <a class="menu--link" (click)="close()" [routerLink]="option.link"
+          routerLinkActive="menu__link--active">
+          <mat-icon>{{option.icon}}</mat-icon>
+          {{option.text}}
+        </a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content>
+    </ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

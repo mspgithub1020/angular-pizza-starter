@@ -9,6 +9,7 @@ import { PizzaListModule } from './pizza/pages/list/pizza-list.module';
 import { CommonModule } from '@angular/common';
 import { RetryInterceptor } from './services/http/retry.interceptor';
 import { RefreshService } from '../core/auth/refresh.service';
+import { MenuModule } from './menu/menu.module';
 
 @NgModule({
   declarations: [PrivateComponent],
@@ -18,6 +19,7 @@ import { RefreshService } from '../core/auth/refresh.service';
     HeaderModule,
     CommonModule,
     PizzaListModule,
+    MenuModule,
   ],
   providers: [
     APIInterceptorProvider,

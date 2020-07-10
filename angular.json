@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "pizza-shop"
+  "defaultProject": "pizza-shop",
+  "cli": {
+    "analytics": "40441e72-1ee0-4bc5-9d69-a1661918db8d"
+  }
 }
