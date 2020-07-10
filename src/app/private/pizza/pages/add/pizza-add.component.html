@@ -1,39 +1,38 @@
 <h2>Añadir pizza</h2>
 <form class="pizzaAdd vertical" (ngSubmit)="onSubmit()" #form="ngForm">
-    <mat-form-field appearance="fill">
-        <mat-label>Pizza name</mat-label>
-        <input matInput name="name" [(ngModel)]="model.name" #name="ngModel" required>
-        <mat-error *ngIf= "name.invalid">
-            {{errorsService.get(name, errors.name)}}
-        </mat-error>
-      </mat-form-field>
-    <mat-form-field class="pizzaAdd__field" appearance="fill">
-        <mat-label>Select ingredients</mat-label>
-        <mat-select name="ingredients"[(ngModel)]="model.ingredients" #ingredientsModel="ngModel" required multiple>
-            <mat-option *ngFor="let ingredient of ingredients" [value]="ingredient.id">
-                {{ingredient.name}}
-            </mat-option>
-        </mat-select>
-  <mat-error *ngIf="ingredientsModel.invalid">
-            {{errorsService.get(ingredientsModel, errors.ingredients)}}
-        </mat-error>
-    </mat-form-field>
-    <button type="button" mat-button (click)="imgFileInput.click()">Add a photo</button>
-    <input hidden type="file" #imgFileInput/>
-    <mat-error>Hola</mat-error>
-       <button mat-raised-button type="submit" color="primary">Add pizza</button>
+  <mat-form-field appearance="fill">
+    <mat-label>Pizza name</mat-label>
+    <input matInput name="name" [(ngModel)]="model.name" #name="ngModel" required>
+    <mat-error *ngIf="name.invalid">
+      {{errorsService.get(name, errors.name)}}
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="pizzaAdd__field" appearance="fill">
+    <mat-label>Select ingredients</mat-label>
+    <mat-select name="ingredients" [(ngModel)]="model.ingredients" #ingredientsModel="ngModel" required multiple>
+      <mat-option *ngFor="let ingredient of ingredients" [value]="ingredient.id">
+        {{ingredient.name}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="ingredientsModel.invalid">
+      {{errorsService.get(ingredientsModel, errors.ingredients)}}
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="pizzaAdd__field" appearance="fill">
+    <mat-label>Image</mat-label>
+    <input matInput name="img" [ngModel]="imageName" type="text" readonly #img="ngModel" (click)="imgInput.click()" required>
+    <mat-error *ngIf="img.invalid">
+      {{errorsService.get(img, errors.img)}}
+    </mat-error>
+  </mat-form-field>
+  <input hidden type="file" #imgInput (change)="onFileChange(imgInput.files)" />
+  <img *ngIf="sanitizedImageUrl" [src]="sanitizedImageUrl" alt="Imagen cargada">
+  <button mat-raised-button type="submit" color="primary">Add pizza</button>
 </form>
 
-<!-- 
-    1. Escuchar al evento change del input de los ficheros para guardar el fichero seleccionado en el modelo.
-    2. Cuando cambie el fichero seleccionado utilizar URL.createObjectUrl para mostrar una imagen con el fichero que se ha cargado.
-    3. Si no hay fichero y el formulario ha sido enviado mostrar el error.
-    4. Al enviar el formulario, además de comprobar que el formulario es válido, comprobar que haya un fichero cargado.
-    5. Enviar un FormData en lugar de json.
+<!--
     6. Después de enviar el formulario correctamente, resetearlo.
-    7. Utilizar URL.revokeObjectUrl para limpiar la imagen generada en el punto 2, cuando el formulario se envie correctamente
-    y cuando el componente de destruya. (ngOndestroy)
-    mirar react
+
     html input file image preview:
     https://stackoverflow.com/questions/4459379/preview-an-image-before-it-is-uploaded
  -->
