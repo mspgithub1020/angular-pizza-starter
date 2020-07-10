@@ -1,6 +1,12 @@
 .pizza-list {
+  list-style: none;
   display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
   justify-content: space-around;
   margin-bottom: var(--ps-margin-medium);
 }
 
+.pizza-list__item {
+  cursor: pointer;
+}
