@@ -1,16 +1,24 @@
 <h1>Crear Comentario</h1>
 <form class="comment vertical" (ngSubmit)="onSubmit()" #form="ngForm">
-    <mat-form-field class="comment__field" appearance="fill">
-        <mat-label>Enter your score</mat-label>
-        <!--
+  <mat-form-field class="comment__field--score" appearance="fill">
+    <mat-label>Enter your score</mat-label>
+    <!--
           TODO: usar validadores min max o interceptar el evento change para impedir
           que se puedan introducir valores invalidos
         -->
-        <input matInput type="number" name="score" [(ngModel)]="model.score" #name="ngModel" required>
-        <mat-error *ngIf="name.invalid">
-          {{errorsService.get(name, errors.name)}}
-        </mat-error>
-    </mat-form-field>
+    <input matInput type="number" min=0 max=10 name="score" [(ngModel)]="model.score" #scoreModel="ngModel" required>
+    <mat-error *ngIf="score.invalid">
+      {{errorsService.get(scoreModel, errors.score)}}
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="" comment__field--text>
+    <mat-label>Comentario</mat-label>
+    <textarea name="text" matInput type="text" placeholder="Valoracion a la Pizza" [(ngModel)]="model.text" #textModel="ngModel"
+      required>ejemplo</textarea>
+    <mat-error *ngIf="text.invalid">
+      {{errorsService.get(textModel, errors.text)}}
+    </mat-error>
+  </mat-form-field>
 
 
 
