@@ -9,7 +9,7 @@ async function create(config) {
     const dbManager = await DBManager.create(config.db);
     app.use('/api', api.create(dbManager, config));
     Object.values(config.statics).forEach((dir) => {
-        app.use(express.static(dir));
+        app.use(express.static(dir, {maxAge: 365 * 24 * 60 * 60 * 1000}));
     });
     app.use(
       helmet.contentSecurityPolicy(config.csp),
