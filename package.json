@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "run-p watch serve",
+    "start": "npm run serve",
+    "dev": "run-p watch serve",
     "watch": "ng serve",
     "serve": "pizza-server",
-    "build": "ng build",
+    "build": "ng build --prod=true",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
