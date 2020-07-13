@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'list',
+    redirectTo: 'list'
+  },
+  {
+    path: ':id',
+    loadChildren: () => import('./pages/detail/pizza-detail.module').then((m) => m.PizzaDetailModule),
   },
 ];
 @NgModule({

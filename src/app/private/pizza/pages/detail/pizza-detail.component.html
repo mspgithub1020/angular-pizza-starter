@@ -1,0 +1,4 @@
+<div *ngIf="pizza">
+    <ps-comment-list [comments]="pizza.comments"></ps-comment-list>
+</div>
+<mat-spinner class="pizza-detail__spinner" *ngIf="!pizza"></mat-spinner>

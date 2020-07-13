@@ -1,0 +1,10 @@
+.pizza-detail__form {
+width: 70%;
+margin: auto;
+}
+
+.pizza-detail__spinner{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+}
