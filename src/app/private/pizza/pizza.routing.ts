@@ -15,7 +15,11 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     redirectTo: 'list'
-  }
+  },
+  {
+    path: 'detail',
+    loadChildren: () => import('./pages/detail/pizza-detail.module').then((m) => m.PizzaDetailModule),
+  },
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],
