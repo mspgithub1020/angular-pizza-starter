@@ -16,10 +16,7 @@ export class PizzaInfoComponent {
     return i < this.pizza.ingredients.length - 1;
   }
   getPrice() {
-    // let total = 0;
-    // for (let ing of this.pizza.ingredients){
-    //   total = total + ing.prize;
-    // }
+
     return this.pizza.ingredients.reduce((total, ing) => total + ing.prize, 0);
   }
 }
