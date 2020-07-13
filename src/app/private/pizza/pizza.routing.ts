@@ -17,7 +17,7 @@ const routes: Routes = [
     redirectTo: 'list'
   },
   {
-    path: 'detail',
+    path: ':id',
     loadChildren: () => import('./pages/detail/pizza-detail.module').then((m) => m.PizzaDetailModule),
   },
 ];

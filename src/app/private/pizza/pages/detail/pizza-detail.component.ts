@@ -3,7 +3,6 @@ import { PizzaService } from '../../services/pizza-http.service';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, Params } from '@angular/router';
 
-
 @Component({
   selector: 'ps-pizza-detail',
   templateUrl: './pizza-detail.component.html',
@@ -32,8 +31,5 @@ export class PizzaDetailComponent implements OnInit, OnDestroy {
       .then((pizza) => {
         this.pizza = pizza;
       });
-  }
-  getImage(pizza) {
-    return `http://localhost:3005${pizza.img}`;
   }
 }

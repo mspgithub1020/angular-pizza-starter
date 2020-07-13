@@ -1,5 +1,4 @@
 <div *ngIf="pizza">
-    <ps-pizza-detail [pizza]= "pizza"></ps-pizza-detail>
     <ps-comment-list [comments]="pizza.comments"></ps-comment-list>
 </div>
-<div *ngIf="!pizza">Loading details...</div>
+<mat-spinner class="pizza-detail__spinner" *ngIf="!pizza"></mat-spinner>
